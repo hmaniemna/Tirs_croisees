@@ -59,31 +59,48 @@ int Machine::ChoosePos(Chessboard& Cm) //takes in the current position of column
     }
     if (V1.v.empty()) //the machine does not have the chance to choose a box that contains a number higher than the player
     { //in this case the machine will try to make the difference between the new values added to their scores lower!!
+        Vect V01 ;
+        Vect V02 ;
+
         for (int j=0; j<Cm.nb ; j++)
         {
             if (Cm.Mat[Cm.posL][j].value!=0)
-              V0.v.push_back(Cm.Mat[Cm.posL][j]); //puts the elements of the current line/column in the list L
+              V01.v.push_back(Cm.Mat[Cm.posL][j]); //puts the elements of the current line/column in the list L
             if (Cm.Mat[j][Cm.posC].value!=0)
-              V0.v.push_back(Cm.Mat[j][Cm.posC]);  //elements of the line will be found in positions with even number
+              V02.v.push_back(Cm.Mat[j][Cm.posC]);  //elements of the line will be found in positions with even number
 
         }
-
-        for (int i=0; i<Cm.nb; i++)
+        for(int i=0;i<V01.v.size();i++)
         {
-          for(int k=0; k<Cm.nb ; k++)
-          {
-            if ((i % 2)==0)
-              V3.v.push_back(Cm.Mat[V0.v[i].L][k]); //puts the elements of the columns of the current line
-            else
-              V3.v.push_back(Cm.Mat[k][V0.v[i].C]); //puts the elements of the lines of the current column
-          }
-          V3.sort();
-          if (V0.v[i].value!=0)
-          {
-               V1.v.push_back(V3.v[i]); //puts the element with the highest value of each column/line
-               V2.push_back(V3.v[0].value - V0.v[i].value);
-          }
-          V3.clear(); //deletes all the elements of this list so we can use it for the next element in L
+            for (int k=0; k<Cm.nb; k++)
+            {
+                if(Cm.Mat[V01.v[i].L][k].value!=0 && k!=V01.v[i].C)
+
+                        V3.v.push_back(Cm.Mat[V01.v[i].L][k]);
+
+                if (Cm.Mat[k][V01.v[i].C].value!=0 && k!=V01.v[i].L)
+                        V3.v.push_back(Cm.Mat[k][V01.v[i].C]);
+
+            }
+            V3.sort();
+            V2.push_back(V3.v[0].value-V01.v[i].value);
+            V3.clear();
+        }
+        for(int i=0;i<V02.v.size();i++)
+        {
+            for (int k=0; k<Cm.nb; k++)
+            {
+                if(Cm.Mat[V02.v[i].L][k].value!=0 && k!=V02.v[i].C)
+
+                        V3.v.push_back(Cm.Mat[V02.v[i].L][k]);
+
+                if (Cm.Mat[k][V02.v[i].C].value!=0 && k!=V02.v[i].L)
+                        V3.v.push_back(Cm.Mat[k][V02.v[i].C]);
+
+            }
+            V3.sort();
+            V2.push_back(V3.v[0].value-V02.v[i].value);
+            V3.clear();
         }
         int m=0;
         for (int i=1;i<V2.size();i++)
@@ -91,7 +108,11 @@ int Machine::ChoosePos(Chessboard& Cm) //takes in the current position of column
           if (V2[i]<V2[m])
             m=i;
         }
-        Box min_Box=V1.v[m];
+        Box min_Box;
+        if (m<V01.v.size())
+            min_Box=V01.v[m];
+        else
+            min_Box=V02.v[m-V01.v.size()-1];
         val=min_Box.value;
         Update_Box(min_Box,Cm);
     }

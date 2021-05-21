@@ -22,7 +22,8 @@ int Difficulty::RandomBox()
    if (level == 2)//the medium level
       n=rand() %5+ 11 ; //chooses a random number between 11 and 15
    if (level==3)// the difficult level
-      n= rand() %10 + 16 ;  //chooses a random number between 16 and 25
+    n=4;
+      //n= rand() %10 + 16 ;  //chooses a random number between 16 and 25
 
    return n;
 }

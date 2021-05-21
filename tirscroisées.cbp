@@ -13,6 +13,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
+					<Add directory="include" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -22,6 +23,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add directory="include" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -32,7 +34,25 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="include/Box.h" />
+		<Unit filename="include/Chessboard.h" />
+		<Unit filename="include/Difficulty.h" />
+		<Unit filename="include/Game.h" />
+		<Unit filename="include/Game_PvsM.h" />
+		<Unit filename="include/Game_PvsP.h" />
+		<Unit filename="include/Machine.h" />
+		<Unit filename="include/Player.h" />
+		<Unit filename="include/Vect.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/Box.cpp" />
+		<Unit filename="src/Chessboard.cpp" />
+		<Unit filename="src/Difficulty.cpp" />
+		<Unit filename="src/Game.cpp" />
+		<Unit filename="src/Game_PvsM.cpp" />
+		<Unit filename="src/Game_PvsP.cpp" />
+		<Unit filename="src/Machine.cpp" />
+		<Unit filename="src/Player.cpp" />
+		<Unit filename="src/Vect.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

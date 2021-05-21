@@ -7,7 +7,7 @@
 
 1621602008 c:\users\fatma\onedrive\documents\semestre2\projet\tirscroisées\include\difficulty.h
 
-1621602019 source:c:\users\fatma\onedrive\documents\semestre2\projet\tirscroisées\src\difficulty.cpp
+1621602274 source:c:\users\fatma\onedrive\documents\semestre2\projet\tirscroisées\src\difficulty.cpp
 	"Difficulty.h"
 	<iostream>
 
@@ -32,7 +32,7 @@
 	"Chessboard.h"
 	<iostream>
 
-1621601626 source:c:\users\fatma\onedrive\documents\semestre2\projet\tirscroisées\src\machine.cpp
+1621612319 source:c:\users\fatma\onedrive\documents\semestre2\projet\tirscroisées\src\machine.cpp
 	"Machine.h"
 	"Vect.h"
 	<iostream>
