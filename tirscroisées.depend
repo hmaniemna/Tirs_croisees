@@ -1,0 +1,82 @@
+# depslib dependency file v1.0
+1621602003 source:c:\users\fatma\onedrive\documents\semestre2\projet\tirscroisées\main.cpp
+	"Difficulty.h"
+	"Game.h"
+	"Chessboard.h"
+	<iostream>
+
+1621602008 c:\users\fatma\onedrive\documents\semestre2\projet\tirscroisées\include\difficulty.h
+
+1621602019 source:c:\users\fatma\onedrive\documents\semestre2\projet\tirscroisées\src\difficulty.cpp
+	"Difficulty.h"
+	<iostream>
+
+1621602068 source:c:\users\fatma\onedrive\documents\semestre2\projet\tirscroisées\src\box.cpp
+	"Box.h"
+
+1621602064 c:\users\fatma\onedrive\documents\semestre2\projet\tirscroisées\include\box.h
+
+1621602097 c:\users\fatma\onedrive\documents\semestre2\projet\tirscroisées\include\game.h
+	"Player.h"
+
+1621602108 c:\users\fatma\onedrive\documents\semestre2\projet\tirscroisées\include\player.h
+	<string>
+	"Chessboard.h"
+
+1621601116 c:\users\fatma\onedrive\documents\semestre2\projet\tirscroisées\include\chessboard.h
+	"Difficulty.h"
+	"Box.h"
+	<vector>
+
+1621602077 source:c:\users\fatma\onedrive\documents\semestre2\projet\tirscroisées\src\chessboard.cpp
+	"Chessboard.h"
+	<iostream>
+
+1621601626 source:c:\users\fatma\onedrive\documents\semestre2\projet\tirscroisées\src\machine.cpp
+	"Machine.h"
+	"Vect.h"
+	<iostream>
+
+1621602088 c:\users\fatma\onedrive\documents\semestre2\projet\tirscroisées\include\machine.h
+	"Chessboard.h"
+	"Box.h"
+
+1621601526 c:\users\fatma\onedrive\documents\semestre2\projet\tirscroisées\include\vect.h
+	<vector>
+	"Box.h"
+
+1621601667 source:c:\users\fatma\onedrive\documents\semestre2\projet\tirscroisées\src\vect.cpp
+	"Vect.h"
+	<iostream>
+
+1621601658 source:c:\users\fatma\onedrive\documents\semestre2\projet\tirscroisées\src\game_pvsp.cpp
+	"Game_PvsP.h"
+	<iostream>
+
+1621601758 c:\users\fatma\onedrive\documents\semestre2\projet\tirscroisées\include\game_pvsp.h
+	"Player.h"
+	"Chessboard.h"
+	"Game.h"
+
+1621601815 source:c:\users\fatma\onedrive\documents\semestre2\projet\tirscroisées\src\game.cpp
+	"Game.h"
+	<iostream>
+	"Game_PvsM.h"
+	"Game_PvsP.h"
+
+1621601834 c:\users\fatma\onedrive\documents\semestre2\projet\tirscroisées\include\game_pvsm.h
+	"Machine.h"
+	"Chessboard.h"
+	"Game.h"
+	<iostream>
+
+1621602130 source:c:\users\fatma\onedrive\documents\semestre2\projet\tirscroisées\src\game_pvsm.cpp
+	"Game_PvsM.h"
+	"Player.h"
+	<iostream>
+
+1621601848 source:c:\users\fatma\onedrive\documents\semestre2\projet\tirscroisées\src\player.cpp
+	"Player.h"
+	<iostream>
+	"Vect.h"
+
